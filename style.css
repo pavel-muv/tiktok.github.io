@@ -298,6 +298,8 @@ template {
 
 .header__content--left {
     max-width: 764px;
+    position: relative;
+    z-index: 10;
 }
 
 .header__content--right {
@@ -309,6 +311,7 @@ template {
     background-image: url(img/bg-header.png);
     background-position: right;
     background-repeat: no-repeat;
+    z-index: 1;
 }
 
 .header__call {
@@ -992,6 +995,12 @@ template {
 
 }
 
+@media (max-width: 980) {
+    .header__content--left {
+        max-width: 480px;
+    }
+}
+
 @media (max-width:900px) {
     .header__container {
         display: flex;
@@ -1009,7 +1018,9 @@ template {
         align-items: center;
     }
 
-    .header__call, .header__title, .header__discr {
+    .header__call,
+    .header__title,
+    .header__discr {
         text-align: center;
     }
 
@@ -1021,7 +1032,7 @@ template {
         padding-left: 0;
     }
 
-    .nav  {
+    .nav {
         background-image: url(img/image.png);
         background-position: 0 0;
         background-repeat: no-repeat;
@@ -1041,7 +1052,7 @@ template {
         width: 343px;
     }
 
-    .header__container  {
+    .header__container {
         padding-top: 60px;
         margin-bottom: 86px;
     }
@@ -1056,7 +1067,8 @@ template {
         margin-bottom: 24px;
     }
 
-    .header__discr, .header__discr .bold {
+    .header__discr,
+    .header__discr .bold {
         font-size: 14px;
         margin-bottom: 16px;
     }
@@ -1065,8 +1077,9 @@ template {
         margin-bottom: 408px;
     }
 
-    .header__item, .header__item .bold {
-        font-size: 8px;
+    .header__item,
+    .header__item .bold {
+        font-size: 10px;
     }
 
     .header__content--left {
@@ -1091,7 +1104,7 @@ template {
 
     .btn {
         padding: 25px 92px;
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .baner {
@@ -1103,7 +1116,7 @@ template {
     }
 
     .offer__container {
-        max-width: 300px;
+        max-width: 320px;
         padding-top: 73px;
     }
 
@@ -1124,8 +1137,17 @@ template {
     }
 
     .offer__item:not(:nth-child(4n)) {
-        margin-right: 25px;
+        margin-right: 0;
     }
+
+    .offer__item:not(:nth-child(2n)) {
+        margin-right: 29px;
+    }
+
+    .offer__list {
+        justify-content: space-between;
+    }
+
 
     .offer__caption {
         font-size: 11px;
@@ -1133,7 +1155,7 @@ template {
     }
 
     .offer__discr {
-        font-size: 8px;
+        font-size: 10px;
     }
 
     .requirements__title {
@@ -1147,8 +1169,9 @@ template {
         margin-bottom: 37px;
     }
 
-    .requirements__item, .requirements__item .bold {
-        font-size: 8px;
+    .requirements__item,
+    .requirements__item .bold {
+        font-size: 10px;
     }
 
     .requirements__item:nth-child(1) {
@@ -1172,7 +1195,8 @@ template {
         margin-bottom: 18px;
     }
 
-    .footer__title, .footer__discr {
+    .footer__title,
+    .footer__discr {
         font-size: 9px;
     }
 
